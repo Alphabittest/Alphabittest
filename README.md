@@ -57,6 +57,19 @@ pentest mobile.
 
 ## 💼 Projetos
 
+### 🛰️ [mini-siem](https://github.com/Alphabittest/mini-siem)
+**Triagem de SOC N1 em logs Linux.** Lê o `auth.log` ou o `journalctl` e detecta
+força bruta, password spraying, login com sucesso depois de força bruta, criação de
+usuário e escalada para grupo administrativo. Cada alerta sai com o mapeamento no
+**MITRE ATT&CK**, as linhas do log que provam o alerta e a ação recomendada.
+
+Rodei no meu próprio Arch (~509 mil linhas em menos de 1 s). Um dos alertas eu não
+lembrava: 6 tentativas de virar root. Voltei ao log, vi que vieram do meu terminal
+local e que 36 s depois o `sudo` deu certo no mesmo terminal. Falso positivo,
+documentado no README. Só biblioteca padrão, 19 testes.
+
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/MITRE_ATT%26CK-C8102E?style=flat-square" /> <img src="https://img.shields.io/badge/journald-555555?style=flat-square" /> <img src="https://img.shields.io/badge/unittest-555555?style=flat-square" />
+
 ### 🏷️ [Robô de Selos por Guichê](https://github.com/Alphabittest/robo-selos)
 **Em uso em produção no cartório.** Lê o relatório diário de selos (PDF), confere os
 números e gera a declaração de cada guichê pronta pra assinar.
